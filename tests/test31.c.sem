@@ -1,0 +1,65 @@
+func main 1
+localloc i 1 4
+localloc sum 1 4
+bgnstmt 6
+t1 := local sum 1
+t2 := 0
+t3 := t1 =i t2
+bgnstmt 7
+t4 := local i 0
+t5 := 0
+t6 := t4 =i t5
+label L1
+t7 := local i 0
+t8 := @i t7
+t9 := 100
+t10 := t8 <i t9
+bt t10 B1
+br B2
+label L2
+t11 := local i 0
+t12 := local i 0
+t13 := @i t12
+t14 := 1
+t15 := t13 +i t14
+t16 := t11 =i t15
+br B3
+label L3
+bgnstmt 8
+t17 := local sum 1
+t18 := @i t17
+t19 := 50
+t20 := t18 ==i t19
+bt t20 B4
+br B5
+label L4
+bgnstmt 9
+br B6
+br B7
+label L5
+bgnstmt 11
+t22 := local sum 1
+t23 := local i 0
+t24 := @i t23
+t25 := @i t22
+t26 := t25 +i t24
+t27 := t22 =i t26
+label L6
+B4=L4
+B5=L5
+B7=L6
+br B8
+label L7
+B1=L3
+B2=L7
+B3=L1
+B8=L2
+bgnstmt 12
+t28 := "%d\n"
+t29 := local sum 1
+t30 := @i t29
+argi t28
+argi t30
+t31 := global printf
+t32 := fi t31 2 t28  t30 
+fend

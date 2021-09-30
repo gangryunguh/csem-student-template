@@ -1,0 +1,43 @@
+Below is the order in which I recommend you implement the semantic
+routines in the sem.c file.
+
+
+fname
+fhead
+ftail
+bgnstmt
+id
+string
+op1
+exprs
+call
+m
+-------------- enough to get through the second example
+
+con
+doret
+set
+op2
+index
+ccexpr
+rel
+n
+backpatch
+doif
+dofor
+-------------- enough to get through the first example
+
+doifelse
+dowhile
+dodo
+ccand
+ccor
+ccnot
+opb
+startloopscope
+endloopscope
+docontinue
+dobreak
+labeldcl
+dogoto
+-------------- routines needed for other test cases you will create

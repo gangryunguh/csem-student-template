@@ -1,0 +1,76 @@
+func main 1
+localloc i 1 4
+localloc j 1 4
+localloc k 1 4
+localloc a 4 8
+localloc b 4 8
+localloc c 4 8
+bgnstmt 9
+t1 := local j 1
+t2 := 5
+t3 := t1 =i t2
+bgnstmt 10
+t4 := local a 3
+t5 := 100
+t6 := cvf t5
+t7 := t4 =f t6
+bgnstmt 11
+t8 := local b 4
+t9 := 200
+t10 := cvf t9
+t11 := t8 =f t10
+bgnstmt 12
+t12 := local i 0
+t13 := local j 1
+t14 := @i t13
+t15 := t12 =i t14
+bgnstmt 13
+t16 := "i is %d\n"
+t17 := local i 0
+t18 := @i t17
+argi t16
+argi t18
+t19 := global printf
+t20 := fi t19 2 t16  t18 
+bgnstmt 14
+t21 := local i 0
+t22 := local a 3
+t23 := @f t22
+t24 := cvi t23
+t25 := t21 =i t24
+bgnstmt 15
+t26 := "i is %d\n"
+t27 := local i 0
+t28 := @i t27
+argi t26
+argi t28
+t29 := global printf
+t30 := fi t29 2 t26  t28 
+bgnstmt 16
+t31 := local a 3
+t32 := local b 4
+t33 := @f t32
+t34 := t31 =f t33
+bgnstmt 17
+t35 := "a is %f\n"
+t36 := local a 3
+t37 := @f t36
+argi t35
+argf t37
+t38 := global printf
+t39 := fi t38 2 t35  t37 
+bgnstmt 18
+t40 := local a 3
+t41 := local i 0
+t42 := @i t41
+t43 := cvf t42
+t44 := t40 =f t43
+bgnstmt 19
+t45 := "a is %f\n"
+t46 := local a 3
+t47 := @f t46
+argi t45
+argf t47
+t48 := global printf
+t49 := fi t48 2 t45  t47 
+fend

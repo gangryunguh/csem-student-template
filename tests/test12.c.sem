@@ -1,0 +1,75 @@
+func main 1
+localloc i 1 4
+localloc j 1 4
+localloc k 1 4
+localloc a 4 8
+localloc b 4 8
+localloc c 4 8
+bgnstmt 9
+t1 := local i 0
+t2 := 1
+t3 := t1 =i t2
+bgnstmt 10
+t4 := local k 2
+t5 := 2
+t6 := t4 =i t5
+bgnstmt 11
+t7 := local i 0
+t8 := @i t7
+t9 := local k 2
+t10 := @i t9
+t11 := t8 <i t10
+bt t11 B1
+br B2
+label L1
+bgnstmt 12
+t12 := "this should be printed\n"
+argi t12
+t13 := global printf
+t14 := fi t13 1 t12 
+label L2
+B1=L1
+B2=L2
+bgnstmt 13
+t15 := local k 2
+t16 := @i t15
+t17 := local i 0
+t18 := @i t17
+t19 := t16 <i t18
+bt t19 B3
+br B4
+label L3
+bgnstmt 14
+t20 := "this should not be printed\n"
+argi t20
+t21 := global printf
+t22 := fi t21 1 t20 
+label L4
+B3=L3
+B4=L4
+bgnstmt 15
+t23 := local k 2
+t24 := @i t23
+t25 := local i 0
+t26 := @i t25
+t27 := t24 <i t26
+bt t27 B5
+br B6
+label L5
+bgnstmt 16
+t28 := "this should not be printed\n"
+argi t28
+t29 := global printf
+t30 := fi t29 1 t28 
+br B7
+label L6
+bgnstmt 18
+t31 := "this should be printed\n"
+argi t31
+t32 := global printf
+t33 := fi t32 1 t31 
+label L7
+B5=L5
+B6=L6
+B7=L7
+fend

@@ -1,0 +1,60 @@
+func func1 1
+formal k 1 4
+bgnstmt 6
+t1 := param k 0
+t2 := @i t1
+t3 := 1
+t4 := t2 +i t3
+reti t4
+fend
+func func2 4
+formal z 4 8
+bgnstmt 11
+t5 := param z 0
+t6 := @f t5
+t7 := 2
+t8 := cvf t7
+t9 := t6 +f t8
+retf t9
+fend
+func main 1
+localloc i 1 4
+localloc x 4 8
+localloc y 4 8
+bgnstmt 19
+t10 := local i 0
+t11 := 2
+argi t11
+t12 := global func1
+t13 := fi t12 1 t11 
+t14 := t10 =i t13
+bgnstmt 20
+t15 := "i is %d\n"
+t16 := local i 0
+t17 := @i t16
+argi t15
+argi t17
+t18 := global printf
+t19 := fi t18 2 t15  t17 
+bgnstmt 21
+t20 := local x 1
+t21 := 3
+t22 := cvf t21
+t23 := t20 =f t22
+bgnstmt 22
+t24 := local y 2
+t25 := local x 1
+t26 := @f t25
+argf t26
+t27 := global func2
+t28 := ff t27 1 t26 
+t29 := t24 =f t28
+bgnstmt 23
+t30 := "y is %f\n"
+t31 := local y 2
+t32 := @f t31
+argi t30
+argf t32
+t33 := global printf
+t34 := fi t33 2 t30  t32 
+fend

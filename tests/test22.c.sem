@@ -1,0 +1,95 @@
+func fact 1
+formal x 1 4
+bgnstmt 6
+t1 := param x 0
+t2 := @i t1
+t3 := 2
+t4 := t2 <i t3
+bt t4 B1
+br B2
+label L1
+bgnstmt 7
+t5 := 1
+reti t5
+br B3
+label L2
+bgnstmt 9
+t6 := param x 0
+t7 := @i t6
+t8 := param x 0
+t9 := @i t8
+t10 := 1
+t11 := t9 -i t10
+argi t11
+t12 := global fact
+t13 := fi t12 1 t11 
+t14 := t7 *i t13
+reti t14
+label L3
+B1=L1
+B2=L2
+B3=L3
+fend
+func main 1
+localloc x 1 40
+localloc i 1 4
+bgnstmt 16
+t15 := local i 1
+t16 := 0
+t17 := t15 =i t16
+label L4
+t18 := local i 1
+t19 := @i t18
+t20 := 10
+t21 := t19 <i t20
+bt t21 B4
+br B5
+label L5
+t22 := local i 1
+t23 := 1
+t24 := @i t22
+t25 := t24 +i t23
+t26 := t22 =i t25
+br B6
+label L6
+bgnstmt 17
+t27 := local i 1
+t28 := @i t27
+t29 := local x 0
+t30 := t29 []i t28
+t31 := local i 1
+t32 := @i t31
+t33 := t30 =i t32
+bgnstmt 18
+t34 := "%10d %d %10d\n"
+t35 := local i 1
+t36 := @i t35
+t37 := local x 0
+t38 := t37 []i t36
+t39 := @i t38
+argi t39
+t40 := global fact
+t41 := fi t40 1 t39 
+t42 := local i 1
+t43 := @i t42
+t44 := local i 1
+t45 := @i t44
+t46 := local x 0
+t47 := t46 []i t45
+t48 := @i t47
+argi t48
+t49 := global fact
+t50 := fi t49 1 t48 
+argi t34
+argi t41
+argi t43
+argi t50
+t51 := global printf
+t52 := fi t51 4 t34  t41  t43  t50 
+br B7
+label L7
+B4=L6
+B5=L7
+B6=L4
+B7=L5
+fend
