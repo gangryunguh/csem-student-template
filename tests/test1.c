@@ -1,5 +1,15 @@
 int m[6];
 
+scale(int x) {
+   int i;
+
+   if (x == 0)
+      return 0;
+   for (i = 0; i < 6; i += 1)
+      m[i] *= x;
+   return 1;
+}
+
 main()
 {
    int i;
@@ -18,14 +28,4 @@ main()
       }
    else
       printf("scale factor is zero\n");
-}
-
-scale(int x) {
-   int i;
-
-   if (x == 0)
-      return 0;
-   for (i = 0; i < 6; i += 1)
-      m[i] *= x;
-   return 1;
 }

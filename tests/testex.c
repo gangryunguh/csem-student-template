@@ -1,6 +1,12 @@
 /*
  * demonstrate argument passing and simple arithmetic operations
  */
+foo(int j, double z)
+{
+   printf("j is %d\n", j);
+   printf("z is %f\n", z);
+}
+
 main()
 {
    double x;
@@ -15,8 +21,3 @@ main()
    foo(i, x);
 }
 
-foo(int j, double z)
-{
-   printf("j is %d\n", j);
-   printf("z is %f\n", z);
-}
