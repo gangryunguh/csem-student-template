@@ -10,9 +10,9 @@
 # define ITABSIZE 37			   /* hash table size for identifiers */
 # define MAXSTK   1000
 
-struct sem_rec *stk[MAXSTK];               /* stack of ptrs to semantic recs */
-struct sem_rec **top = stk;                /* stack pointer */
-struct sem_rec **prevtop = NULL;           /* previous top */
+static struct sem_rec *stk[MAXSTK];               /* stack of ptrs to semantic recs */
+static struct sem_rec **top = stk;                /* stack pointer */
+static struct sem_rec **prevtop = NULL;           /* previous top */
 
 int numrecs = 0;                           /* number of semantic recs */
 
