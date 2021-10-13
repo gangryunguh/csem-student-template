@@ -18,12 +18,12 @@ int numrecs = 0;                           /* number of semantic recs */
 
 int level = 0;                             /* current block level */
 
-struct s_chain {
+static struct s_chain {
    char *s_ptr;                            /* string pointer */
    struct s_chain *s_next;                 /* next in chain */
    } *str_table[STABSIZE] = {0};           /* string hash table */
 
-struct id_entry *id_table[ITABSIZE] = {0}; /* identifier hash table */
+static struct id_entry *id_table[ITABSIZE] = {0}; /* identifier hash table */
 
 /*
  *  dump - dump identifiers with block level >= blev to f
