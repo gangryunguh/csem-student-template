@@ -1,0 +1,12 @@
+func test4 1
+bgnstmt 6
+t1 := "in test4\n"
+argi t1
+t2 := global printf
+t3 := fi t2 1 t1
+fend
+func main 1
+bgnstmt 11
+t4 := global test4
+t5 := fi t4 0
+fend

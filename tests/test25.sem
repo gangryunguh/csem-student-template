@@ -1,0 +1,296 @@
+alloc up 17 64
+alloc down 17 64
+alloc rows 17 32
+alloc x 17 32
+func print 1
+localloc k 1 4
+bgnstmt 10
+t1 := local k 0
+t2 := 0
+t3 := t1 =i t2
+label L1
+t4 := local k 0
+t5 := @i t4
+t6 := 8
+t7 := t5 <i t6
+bt t7 B1
+br B2
+label L2
+t8 := local k 0
+t9 := 1
+t10 := @i t8
+t11 := t10 +i t9
+t12 := t8 =i t11
+br B3
+label L3
+bgnstmt 11
+t13 := " %d"
+t14 := local k 0
+t15 := @i t14
+t16 := global x
+t17 := t16 []i t15
+t18 := @i t17
+argi t13
+argi t18
+t19 := global printf
+t20 := fi t19 2 t13 t18
+br B4
+label L4
+B1=L3
+B2=L4
+B3=L1
+B4=L2
+bgnstmt 12
+t21 := "\n"
+argi t21
+t22 := global printf
+t23 := fi t22 1 t21
+fend
+func queens 1
+formal c 1 4
+localloc r 1 4
+bgnstmt 19
+t24 := local r 0
+t25 := 0
+t26 := t24 =i t25
+label L5
+t27 := local r 0
+t28 := @i t27
+t29 := 8
+t30 := t28 <i t29
+bt t30 B5
+br B6
+label L6
+t31 := local r 0
+t32 := 1
+t33 := @i t31
+t34 := t33 +i t32
+t35 := t31 =i t34
+br B7
+label L7
+bgnstmt 20
+t36 := local r 0
+t37 := @i t36
+t38 := global rows
+t39 := t38 []i t37
+t40 := @i t39
+t41 := 0
+t42 := t40 ==i t41
+bt t42 B8
+br B9
+label L8
+t43 := local r 0
+t44 := @i t43
+t45 := param c 0
+t46 := @i t45
+t47 := t44 -i t46
+t48 := 7
+t49 := t47 +i t48
+t50 := global up
+t51 := t50 []i t49
+t52 := @i t51
+t53 := 0
+t54 := t52 ==i t53
+bt t54 B10
+br B11
+B8=L8
+label L9
+t55 := local r 0
+t56 := @i t55
+t57 := param c 0
+t58 := @i t57
+t59 := t56 +i t58
+t60 := global down
+t61 := t60 []i t59
+t62 := @i t61
+t63 := 0
+t64 := t62 ==i t63
+bt t64 B12
+br B13
+B10=L9
+label L10
+bgnstmt 21
+t65 := local r 0
+t66 := @i t65
+t67 := global rows
+t68 := t67 []i t66
+t69 := 1
+t70 := t68 =i t69
+bgnstmt 22
+t71 := local r 0
+t72 := @i t71
+t73 := param c 0
+t74 := @i t73
+t75 := t72 -i t74
+t76 := 7
+t77 := t75 +i t76
+t78 := global up
+t79 := t78 []i t77
+t80 := 1
+t81 := t79 =i t80
+bgnstmt 23
+t82 := local r 0
+t83 := @i t82
+t84 := param c 0
+t85 := @i t84
+t86 := t83 +i t85
+t87 := global down
+t88 := t87 []i t86
+t89 := 1
+t90 := t88 =i t89
+bgnstmt 24
+t91 := param c 0
+t92 := @i t91
+t93 := global x
+t94 := t93 []i t92
+t95 := local r 0
+t96 := @i t95
+t97 := t94 =i t96
+bgnstmt 25
+t98 := param c 0
+t99 := @i t98
+t100 := 7
+t101 := t99 ==i t100
+bt t101 B14
+br B15
+label L11
+bgnstmt 26
+t102 := global print
+t103 := fi t102 0
+br B16
+label L12
+bgnstmt 28
+t104 := param c 0
+t105 := @i t104
+t106 := 1
+t107 := t105 +i t106
+argi t107
+t108 := global queens
+t109 := fi t108 1 t107
+label L13
+B14=L11
+B15=L12
+B16=L13
+bgnstmt 29
+t110 := local r 0
+t111 := @i t110
+t112 := global rows
+t113 := t112 []i t111
+t114 := 0
+t115 := t113 =i t114
+bgnstmt 30
+t116 := local r 0
+t117 := @i t116
+t118 := param c 0
+t119 := @i t118
+t120 := t117 -i t119
+t121 := 7
+t122 := t120 +i t121
+t123 := global up
+t124 := t123 []i t122
+t125 := 0
+t126 := t124 =i t125
+bgnstmt 31
+t127 := local r 0
+t128 := @i t127
+t129 := param c 0
+t130 := @i t129
+t131 := t128 +i t130
+t132 := global down
+t133 := t132 []i t131
+t134 := 0
+t135 := t133 =i t134
+label L14
+B12=L10
+B9=L14
+B11=L14
+B13=L14
+br B17
+label L15
+B5=L7
+B6=L15
+B7=L5
+B17=L6
+fend
+func main 1
+localloc i 1 4
+bgnstmt 38
+t136 := local i 0
+t137 := 0
+t138 := t136 =i t137
+label L16
+t139 := local i 0
+t140 := @i t139
+t141 := 16
+t142 := t140 <i t141
+bt t142 B18
+br B19
+label L17
+t143 := local i 0
+t144 := 1
+t145 := @i t143
+t146 := t145 +i t144
+t147 := t143 =i t146
+br B20
+label L18
+bgnstmt 39
+t148 := local i 0
+t149 := @i t148
+t150 := global up
+t151 := t150 []i t149
+t152 := local i 0
+t153 := @i t152
+t154 := global down
+t155 := t154 []i t153
+t156 := 0
+t157 := t155 =i t156
+t158 := t151 =i t157
+br B21
+label L19
+B18=L18
+B19=L19
+B20=L16
+B21=L17
+bgnstmt 40
+t159 := local i 0
+t160 := 0
+t161 := t159 =i t160
+label L20
+t162 := local i 0
+t163 := @i t162
+t164 := 8
+t165 := t163 <i t164
+bt t165 B22
+br B23
+label L21
+t166 := local i 0
+t167 := 1
+t168 := @i t166
+t169 := t168 +i t167
+t170 := t166 =i t169
+br B24
+label L22
+bgnstmt 41
+t171 := local i 0
+t172 := @i t171
+t173 := global rows
+t174 := t173 []i t172
+t175 := local i 0
+t176 := @i t175
+t177 := global x
+t178 := t177 []i t176
+t179 := 0
+t180 := t178 =i t179
+t181 := t174 =i t180
+br B25
+label L23
+B22=L22
+B23=L23
+B24=L20
+B25=L21
+bgnstmt 42
+t182 := 0
+argi t182
+t183 := global queens
+t184 := fi t183 1 t182
+fend

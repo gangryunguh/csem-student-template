@@ -29,3 +29,4 @@ main()
    else
       printf("scale factor is zero\n");
 }
+

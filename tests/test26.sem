@@ -1,0 +1,129 @@
+func main 1
+localloc c 1 4
+localloc nw 1 4
+localloc nl 1 4
+localloc nc 1 4
+localloc inword 1 4
+bgnstmt 6
+t1 := local nl 2
+t2 := local nw 1
+t3 := local nc 3
+t4 := 0
+t5 := t3 =i t4
+t6 := t2 =i t5
+t7 := t1 =i t6
+bgnstmt 7
+t8 := local inword 4
+t9 := 0
+t10 := t8 =i t9
+bgnstmt 8
+label L1
+t11 := local c 0
+t12 := global getchar
+t13 := fi t12 0
+t14 := t11 =i t13
+t15 := 1
+t16 := -i t15
+t17 := t14 !=i t16
+bt t17 B1
+br B2
+label L2
+bgnstmt 9
+t18 := local nc 3
+t19 := 1
+t20 := @i t18
+t21 := t20 +i t19
+t22 := t18 =i t21
+bgnstmt 10
+t23 := local c 0
+t24 := @i t23
+t25 := 10
+t26 := t24 ==i t25
+bt t26 B3
+br B4
+label L3
+bgnstmt 11
+t27 := local nl 2
+t28 := 1
+t29 := @i t27
+t30 := t29 +i t28
+t31 := t27 =i t30
+label L4
+B3=L3
+B4=L4
+bgnstmt 12
+t32 := local c 0
+t33 := @i t32
+t34 := 32
+t35 := t33 ==i t34
+bt t35 B5
+br B6
+label L5
+t36 := local c 0
+t37 := @i t36
+t38 := 10
+t39 := t37 ==i t38
+bt t39 B7
+br B8
+B6=L5
+label L6
+t40 := local c 0
+t41 := @i t40
+t42 := 9
+t43 := t41 ==i t42
+bt t43 B9
+br B10
+B8=L6
+label L7
+bgnstmt 13
+t44 := local inword 4
+t45 := 0
+t46 := t44 =i t45
+br B11
+label L8
+bgnstmt 14
+t47 := local inword 4
+t48 := @i t47
+t49 := 0
+t50 := t48 ==i t49
+bt t50 B12
+br B13
+label L9
+bgnstmt 15
+t51 := local inword 4
+t52 := 1
+t53 := t51 =i t52
+bgnstmt 16
+t54 := local nw 1
+t55 := 1
+t56 := @i t54
+t57 := t56 +i t55
+t58 := t54 =i t57
+label L10
+B12=L9
+B13=L10
+B5=L7
+B7=L7
+B9=L7
+B10=L8
+B11=L10
+br B14
+label L11
+B1=L2
+B2=L11
+B14=L1
+bgnstmt 19
+t59 := "	%d	%d	%d\n"
+t60 := local nl 2
+t61 := @i t60
+t62 := local nw 1
+t63 := @i t62
+t64 := local nc 3
+t65 := @i t64
+argi t59
+argi t61
+argi t63
+argi t65
+t66 := global printf
+t67 := fi t66 4 t59 t61 t63 t65
+fend

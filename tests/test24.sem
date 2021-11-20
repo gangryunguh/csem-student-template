@@ -1,0 +1,31 @@
+func main 1
+localloc i 1 4
+bgnstmt 8
+t1 := local i 0
+t2 := 3
+t3 := t1 =i t2
+bgnstmt 9
+t4 := local i 0
+t5 := @i t4
+t6 := 0
+t7 := t5 !=i t6
+bt t7 B1
+br B2
+label L1
+bgnstmt 10
+t8 := "this should be printed\n"
+argi t8
+t9 := global printf
+t10 := fi t9 1 t8
+br B3
+label L2
+bgnstmt 12
+t11 := "this should not be printed\n"
+argi t11
+t12 := global printf
+t13 := fi t12 1 t11
+label L3
+B1=L1
+B2=L2
+B3=L3
+fend

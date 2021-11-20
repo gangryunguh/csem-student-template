@@ -1,0 +1,42 @@
+func test3 1
+formal a 1 4
+formal b 4 8
+bgnstmt 6
+t1 := "a is %d\n"
+t2 := param a 0
+t3 := @i t2
+argi t1
+argi t3
+t4 := global printf
+t5 := fi t4 2 t1 t3
+bgnstmt 7
+t6 := "b is %f\n"
+t7 := param b 1
+t8 := @f t7
+argi t6
+argf t8
+t9 := global printf
+t10 := fi t9 2 t6 t8
+fend
+func main 1
+localloc i 1 4
+localloc f 4 8
+bgnstmt 15
+t11 := local i 0
+t12 := 10
+t13 := t11 =i t12
+bgnstmt 16
+t14 := local f 1
+t15 := 15
+t16 := cvf t15
+t17 := t14 =f t16
+bgnstmt 17
+t18 := local i 0
+t19 := @i t18
+t20 := local f 1
+t21 := @f t20
+argi t19
+argf t21
+t22 := global test3
+t23 := fi t22 2 t19 t21
+fend

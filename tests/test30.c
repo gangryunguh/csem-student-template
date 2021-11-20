@@ -5,7 +5,6 @@ main()
 
    sum = 0;
    i = 0;
-lab:
 loop:
    i = i + 1;
    if (i >= 100)
@@ -15,7 +14,7 @@ loop:
    if (sum == 50)
       goto out;
    sum = sum + i;
-   goto lab;
+   goto loop;
 out:
    printf("i = %d, sum = %d\n", i, sum);
 }

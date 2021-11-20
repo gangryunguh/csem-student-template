@@ -1,0 +1,45 @@
+func main 1
+localloc i 1 4
+localloc j 1 4
+localloc k 1 4
+bgnstmt 8
+t1 := local i 0
+t2 := 0
+t3 := t1 =i t2
+label L1
+br B1
+label L2
+t4 := local i 0
+t5 := 1
+t6 := @i t4
+t7 := t6 +i t5
+t8 := t4 =i t7
+br B2
+label L3
+bgnstmt 9
+t9 := local i 0
+t10 := @i t9
+t11 := 50
+t12 := t10 ==i t11
+bt t12 B3
+br B4
+label L4
+bgnstmt 10
+t13 := "exit point reached\n"
+argi t13
+t14 := global printf
+t15 := fi t14 1 t13
+bgnstmt 11
+t16 := 0
+argi t16
+t17 := global exit
+t18 := fi t17 1 t16
+label L5
+B3=L4
+B4=L5
+br B5
+label L6
+B1=L3
+B2=L1
+B5=L2
+fend
