@@ -1,11 +1,19 @@
 %{
 #include <stdio.h>
 #include <stdlib.h>
+#ifdef MAKE
+#include "./cc.h"
+#include "./scan.h"
+#include "./semutil.h"
+#include "./sem.h"
+#include "./sym.h"
+#else
 #include "../cc.h"
 #include "../scan.h"
 #include "../semutil.h"
 #include "../sem.h"
 #include "../sym.h"
+#endif
 %}
 
 %union {

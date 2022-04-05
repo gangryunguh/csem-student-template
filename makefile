@@ -1,6 +1,6 @@
 DIR=.
 CC=gcc
-CFLAGS= -g -c -I$(DIR) -I. -DLEFTTORIGHT -DSPARC
+CFLAGS= -g -c -I$(DIR) -I. -DLEFTTORIGHT -DSPARC -DMAKE
 
 csem: sym.o scan.o semdum.o cgram.tab.o semutil.o
 	gcc -g -o csem sym.o scan.o semdum.o cgram.tab.o semutil.o
