@@ -21,7 +21,6 @@ set (PROJECT_NAME_SOURCES
         sym.c
         scan.c
         semutil.c
-        myalloc.c
         )
 
 set (PROJECT_NAME_HEADERS
