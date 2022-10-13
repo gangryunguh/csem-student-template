@@ -7,6 +7,6 @@ void leaveblock();
 struct id_entry *lookup(char *, int);
 void sdump(FILE *);
 char *slookup(char []);
-int hash(char *);
+long hash(char *);
 char *alloc(unsigned);
 void save_rec(struct sem_rec *);

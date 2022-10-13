@@ -172,9 +172,9 @@ char *slookup(char str[])
 /*
  * hash - hash name, turn address into hash number
  */
-int hash(char *s)
+long hash(char *s)
 {
-   return((int ) s);
+   return((long ) s);
 }   
 
 /*
