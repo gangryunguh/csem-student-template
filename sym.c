@@ -184,7 +184,7 @@ char *alloc(unsigned n)
 {
    char *p;
 
-   if ((p = calloc(1, n)) == NULL) {
+   if ((p = malloc(n)) == NULL) {
       yyerror("csem: out of space");
       exit (1);
    }
